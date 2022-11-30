@@ -12,6 +12,7 @@ echo "The node name is: ${env.NODE_NAME}"
 
 //Checkout Code State
 stage('CheckoutCode'){
+sendSlackNotifications("STARTED")
 git branch: 'development', credentialsId: '2b4cd540-c650-491b-90ce-1fb6a82a2972', url: 
 'https://github.com/Citybank-applications/maven-web-application.git'
 }
